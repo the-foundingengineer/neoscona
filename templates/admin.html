@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Neoscona Admin - Post</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { background-color: #1f1e1b; color: #888681; font-family: 'Inter', sans-serif; margin: 0; padding: 2rem; }
+    .admin-container { max-width: 600px; margin: 4rem auto; background: #26241f; padding: 3rem; border: 1px solid #2e2c27; border-radius: 12px; }
+    .admin-container h1 { color: #f1efe8; margin-bottom: 2rem; font-size: 2rem; letter-spacing: -0.03em; }
+    .form-group { margin-bottom: 1.5rem; }
+    label { display: block; margin-bottom: 0.5rem; color: #f1efe8; font-size: 0.875rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; }
+    input, textarea { width: 100%; box-sizing: border-box; background: #1f1e1b; border: 1px solid #2e2c27; border-radius: 6px; padding: 0.8rem; color: #f1efe8; font-family: inherit; font-size: 1rem; outline: none; transition: border-color 0.2s; }
+    input:focus, textarea:focus { border-color: #6d28d9; }
+    .btn-submit { background: #6d28d9; color: white; padding: 1rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; border: none; transition: background 0.2s; width: 100%; margin-top: 1rem; }
+    .btn-submit:hover { background: #4c1d95; }
+    .nav-back { display: inline-block; margin-bottom: 2rem; color: #c4b5fd; text-decoration: none; font-size: 0.875rem; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600; }
+    .nav-back:hover { color: #edeae4; }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <a href="/blog" class="nav-back">← Back to Blog</a>
+    <h1>Create a New Post</h1>
+    <form method="POST">
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="title" required placeholder="Bringing Verifiable Compute to Onchain Prop Trading" />
+      </div>
+      <div class="form-group">
+        <label>Category / Tag</label>
+        <input type="text" name="category" required placeholder="Architecture, Case Study, etc." />
+      </div>
+      <div class="form-group">
+        <label>Featured Image Path</label>
+        <input type="text" name="image_url" value="/images/wir-3-purple.svg" required />
+      </div>
+      <div class="form-group">
+        <label>Post Body (Text)</label>
+        <textarea name="content" rows="6" required placeholder="Write your post content here..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Publish Post to Database</button>
+    </form>
+  </div>
+</body>
+</html>
