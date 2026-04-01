@@ -12,7 +12,7 @@ DB_PORT = '5432'
 DB_NAME = 'neoscona_db'
 
 def export_site():
-    print("🚀 Starting static export for GitHub Pages...")
+    print("Starting static export for GitHub Pages...")
     
     # 1. Connect to local database
     try:
@@ -29,7 +29,7 @@ def export_site():
         cur.close()
         conn.close()
     except Exception as e:
-        print(f"❌ Error connecting to database: {e}")
+        print(f"Error connecting to database: {e}")
         return
 
     # 2. Setup Jinja2 Environment
@@ -55,7 +55,7 @@ def export_site():
     with open('CNAME', 'w') as f:
         f.write('neoscona.xyz')
 
-    print("\n✅ Export Complete!")
+    print("\nExport Complete!")
     print("Files ready for GitHub Pages: index.html, blog.html, CNAME, static/")
     print("Note: Ensure your GitHub repository includes the 'static/' folder.")
 
