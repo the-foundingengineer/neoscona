@@ -34,7 +34,7 @@ def deploy():
         # But we'll continue to push just in case the remote is behind.
     
     # 4. Push to GitHub
-    if not run_command("git push origin main"):
+    if not run_command("git push origin master"):
         print("Git push failed. Ensure you have internet access and SSH/Auth set up.")
         return
 
